@@ -11,6 +11,19 @@ module.exports = {
     seeds: {
       directory: __dirname + '/src/server/db/seeds/dev'
     }
+  },
+
+  production: {
+    client: 'postgresql',
+    connection: {
+      database: process.env.NODE_ENV
+    },
+    migrations: {
+      directory: __dirname + '/src/server/db/migrations'
+    },
+    seeds: {
+      directory: __dirname + '/src/server/db/seeds/production'
+    }
   }
 
 };
